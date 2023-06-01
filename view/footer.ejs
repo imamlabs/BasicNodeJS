@@ -1,0 +1,12 @@
+<!-- Tambahkan script dan penutup tag </body> dan </html> -->
+<script>
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Menghentikan aksi default formulir pengiriman
+            document.querySelector('form').submit(); // Melakukan pengiriman formulir
+        }
+    });
+</script>
+</body>
+</html>

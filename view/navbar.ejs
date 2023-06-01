@@ -8,17 +8,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Page 1 <span class="caret"></span>
+                        Master Data <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Page 1-1</a></li>
-                        <li><a class="dropdown-item" href="#">Page 1-2</a></li>
-                        <li><a class="dropdown-item" href="#">Page 1-3</a></li>
+                        <li><a class="dropdown-item" href="/mahasiswa">Data Mahasiswa</a></li>
+                        <li><a class="dropdown-item" href="/dosen">Data Dosen</a></li>
+                        <li><a class="dropdown-item" href="/staff">Data Staff</a></li>
+                        <li><a class="dropdown-item" href="/admin">Data Admin</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -27,11 +28,11 @@
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                            <path
-                                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2a5 5 0 0 0-4-2h-2a5 5 0 0 0-4 2L1 14h14l-1-3zm-8-.464A4.978 4.978 0 0 1 8 10a4.978 4.978 0 0 1 3-1.464V12H4V9.536z" />
-                        </svg> Sign Up</a>
+<form class="d-flex" action='/cari' method="POST">
+  <input type="text" name="cari" placeholder="Cari..." required>
+  <input type="hidden" name="target" id="target" value="<%= target %>">
+  <button type="submit">Cari</button>
+</form>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

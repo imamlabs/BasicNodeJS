@@ -1,0 +1,59 @@
+<center>
+                                <section class="text-center">
+            <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+                    margin-top: 60px;
+                    margin-bottom: 60px;
+                    background: hsla(240, 23%, 95%, 0.8);
+                    backdrop-filter: blur(30px);
+                    ">
+                <div class="card-body py-7 px-md-7">
+                    <div class="row  justify-content-center">
+                        <div class="container">
+                                    <h2 class="fw-bold mb-3"><%= user ? "Edit Data" : "Tambah Data" %></h2>
+                                    <form action="<%= user ? '/update/' + user.id : '/tambah' %>" method="post">
+                                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                                        <div class="row">
+                                              <div class="col-md-3 mb-3">
+                                                <div class="form-outline">
+                                                    <label for="nama">NPM</label>
+                                                    <input type="text" class="form-control" id="npm" name="npm" placeholder="Masukkan NPM Mahasiswa"
+                                                        value="<%= user ? user.npm : '' %>">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-4">
+                                                <div class="form-outline">
+                                                    <label for="nama">Nama</label>
+                                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama"
+                                                        value="<%= user ? user.nama : '' %>">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-4">
+                                                <div class="form-outline">
+                                                    <label for="semester">Semester</label>
+                                                    <input type="text" class="form-control" id="semester" name="semester" placeholder="Masukkan Semeter"
+                                                        value="<%= user ? user.semester : '' %>">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-4">
+                                            <div class="form-group">
+                                                <label for="jurusan">Jurusan</label>
+                                                <select class="form-control" name="jurusan">
+                                                    <option value="<%= user ? user.Jurusan : '' %>"><%= user ? user.Jurusan : 'Pilih Jurusan' %></option>
+                                                    <option value="Sistem Informasi">Sistem Informasi</option>
+                                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                                    <option value="Ilmu Komputer">Ilmu Komputer</option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block custom-width"">
+                                            <%= user ? 'Update' : 'Tambah' %>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </section>
+                            </center>
